@@ -44,9 +44,16 @@ class CategoryVC: UIViewController, UITableViewDataSource,
     
         if let productsVC = segue.destination as? ProductsVC{
             
+            let barbtn = UIBarButtonItem()
+            barbtn.title = " "
+            navigationItem.backBarButtonItem = barbtn
+            
             assert(sender as? Category != nil)
             productsVC.initProducts(category: sender as! Category)
         }
+        
+       
+        
     }
 
 
